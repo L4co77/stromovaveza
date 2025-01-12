@@ -131,6 +131,23 @@ header {
 .hero {
     position: relative;
     text-align: center;
+    height: 100vh;
+
+    @media (max-width: 480px) {
+        height: 80vh;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        height: 100px;
+        width: 100vw;
+        background-color: #671d48;
+        clip-path: polygon(0% 50%, 0% 0%, 50% 50%, 50% 50%, 100% 0%, 100% 100%, 0% 100%);
+        z-index: 1;
+    }
 
     img {
         width: 100%;
@@ -142,33 +159,61 @@ header {
         }
     }
 
-    .button {
+    p {
         position: absolute;
-        top: 50%;
+        top: 80%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding: 1rem 2rem;
-        font-size: 1.5rem;
         color: white;
-        background-color: $button-color;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-
-        &:hover {
-            background-color: darken($button-color, 10%);
-        }
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
 
         @media (max-width: 768px) {
-            font-size: 1.2rem;
-            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
         }
 
         @media (max-width: 480px) {
-            font-size: 1rem;
-            padding: 0.6rem 1.2rem;
+            font-size: 0.8rem;
         }
+
+        &::after {
+            content: '';
+            background: url(../assets/images/arrow.png);
+            width: 20px;
+            height: 30px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 36px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken($button-color, 10%);
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
     }
 }
 
@@ -214,6 +259,22 @@ header {
 
     @media (max-width: 480px) {
         padding: 1rem;
+    }
+}
+
+.info {
+    background-image: url(../assets/images/bg.jpg);
+    color: white;
+    padding-top: 80px;
+    padding-bottom: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    p {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.2rem;
     }
 }
 
