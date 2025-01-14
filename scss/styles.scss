@@ -29,8 +29,12 @@ header {
     color: white;
     z-index: 1000;
 
-    .logo img {
-        height: 50px;
+    .logo {
+        display: flex;
+        
+        img {
+            height: 60px;
+        }
     }
 
     nav ul {
