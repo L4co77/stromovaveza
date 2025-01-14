@@ -21,8 +21,10 @@ header {
   background: rgba(42, 123, 141, 0.8);
   color: white;
   z-index: 1000; }
-  header .logo img {
-    height: 50px; }
+  header .logo {
+    display: flex; }
+    header .logo img {
+      height: 60px; }
   header nav ul {
     list-style: none;
     display: flex;
