@@ -35,14 +35,7 @@ header {
       font-weight: bold;
       transition: color 0.3s; }
       header nav ul li a:hover {
-        color: #ffb733; }
-    header nav ul .reservation-btn {
-      background-color: #ffa500;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      color: white; }
-      header nav ul .reservation-btn:hover {
-        background-color: #cc8400; }
+        color: #0a6f4a; }
   header .hamburger {
     display: none; }
     header .hamburger span {
@@ -146,7 +139,9 @@ header {
   text-decoration: none;
   transition: background-color 0.3s; }
   .button:hover {
-    background-color: #cc8400; }
+    background-color: #06402b;
+    border-color: #06402b;
+    color: white; }
   @media (max-width: 768px) {
     .button {
       font-size: 1.2rem;
@@ -174,7 +169,7 @@ header {
       .info p, .info a, .photos p, .photos a, .reservation p, .reservation a {
         font-size: 0.9rem; } }
   .info a, .photos a, .reservation a {
-    color: #2a7b8d;
+    color: #06402b;
     text-decoration: none;
     font-weight: bold; }
     .info a:hover, .photos a:hover, .reservation a:hover {
@@ -198,9 +193,11 @@ header {
     max-width: 800px;
     margin: 0 auto;
     font-size: 1.2rem; }
+  .info img {
+    width: 200px; }
 
 footer {
-  background-color: #2a7b8d;
+  background-color: #06402b;
   color: white;
   text-align: center;
   padding: 1rem 0; }

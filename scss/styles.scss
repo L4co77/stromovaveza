@@ -1,7 +1,7 @@
 // Základné farby a štýly
 $background-color: #f4f4f4;
-$primary-color: #2a7b8d;
-$button-color: #ffa500;
+$primary: #333;
+$button-hover-color: #06402b;
 
 * {
     margin: 0;
@@ -12,7 +12,7 @@ $button-color: #ffa500;
 body {
     font-family: Arial, sans-serif;
     background-color: $background-color;
-    color: #333;
+    color: $primary;
     line-height: 1.6;
 }
 
@@ -26,7 +26,7 @@ header {
     align-items: center;
     padding: 1rem 2rem;
     background: rgba(255, 255, 255, 0.5);
-    color: #333;
+    color: $primary;
     z-index: 1000;
 
     .logo {
@@ -43,24 +43,13 @@ header {
         gap: 1.5rem;
 
         li a {
-            color: #333;
+            color: $primary;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
 
             &:hover {
-                color: lighten($button-color, 10%);
-            }
-        }
-
-        .reservation-btn {
-            background-color: $button-color;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            color: white;
-
-            &:hover {
-                background-color: darken($button-color, 10%);
+                color: lighten($button-hover-color, 10%);
             }
         }
     }
@@ -198,16 +187,18 @@ header {
 .button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    color: #333;
+    color: $primary;
     background-color: transparent;
-    border: 2px solid #333;
+    border: 2px solid $primary;
     border-radius: 36px;
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: darken($button-color, 10%);
+        background-color: $button-hover-color;
+        border-color: $button-hover-color;
+        color: white;
     }
 
     @media (max-width: 768px) {
@@ -248,7 +239,7 @@ header {
     }
 
     a {
-        color: $primary-color;
+        color: $button-hover-color;
         text-decoration: none;
         font-weight: bold;
 
@@ -280,11 +271,15 @@ header {
         margin: 0 auto;
         font-size: 1.2rem;
     }
+
+    img {
+        width: 200px;
+    }
 }
 
 // Footer
 footer {
-    background-color: $primary-color;
+    background-color: $button-hover-color;
     color: white;
     text-align: center;
     padding: 1rem 0;
