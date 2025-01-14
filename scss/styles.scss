@@ -17,7 +17,7 @@ body {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,15 +25,15 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: rgba(42, 123, 141, 0.8);
-    color: white;
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
     z-index: 1000;
 
     .logo {
         display: flex;
         
         img {
-            height: 60px;
+            height: 50px;
         }
     }
 
@@ -43,7 +43,7 @@ header {
         gap: 1.5rem;
 
         li a {
-            color: white;
+            color: #333;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
@@ -198,9 +198,9 @@ header {
 .button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    color: white;
+    color: #333;
     background-color: transparent;
-    border: 2px solid white;
+    border: 2px solid #333;
     border-radius: 36px;
     cursor: pointer;
     text-decoration: none;
