@@ -41,6 +41,18 @@ export default [
       },
     },
   },
+  {
+    files: ["**/*.test.ts", "**/*.test.tsx"],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.vitest,
+      },
+    },
+    rules: {
+      // v testoch používame globálne funkcie z Vitestu (describe, it, expect, vi)
+      // nechceme, aby na ne no-undef kričal
+      "no-undef": "off",
+    },
+  },
 ];
-
-

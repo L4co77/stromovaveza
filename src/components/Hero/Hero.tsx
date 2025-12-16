@@ -16,7 +16,6 @@ export default function Hero({ onMoreClick, labels }: HeroProps) {
         maybePromise.catch((error) => {
           // v testovacom prostredí (jsdom) autoplay nemusí fungovať, preto len logujeme
           // a nenecháme chybu spadnúť ako neodchytenú
-          // eslint-disable-next-line no-console
           console.error("Video autoplay failed:", error);
         });
       }

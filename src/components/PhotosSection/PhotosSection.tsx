@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import type { PhotosSectionProps } from "./PhotosSection.types";
 import {
   PhotosWrapper,
@@ -50,7 +50,7 @@ export default function PhotosSection({ labels }: PhotosSectionProps) {
     setActiveIndex(null);
   };
 
-  const showPrev = (event: React.MouseEvent) => {
+  const showPrev = (event: MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     setActiveIndex((prev) => {
       if (prev === null) return prev;
@@ -58,7 +58,7 @@ export default function PhotosSection({ labels }: PhotosSectionProps) {
     });
   };
 
-  const showNext = (event: React.MouseEvent) => {
+  const showNext = (event: MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     setActiveIndex((prev) => {
       if (prev === null) return prev;

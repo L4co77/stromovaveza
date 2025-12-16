@@ -1,3 +1,4 @@
+import type React from "react";
 import type { Labels, Lang } from "../../types";
 
 export interface NavTarget {

@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "../../theme";
 import Header from "./Header";
 import type { Labels } from "../../types";
-import type { HeaderProps, NavTarget } from "./Header.types";
+import type { HeaderProps } from "./Header.types";
 
 const labels: Labels = {
   lang: "sk",
@@ -23,19 +23,10 @@ const labels: Labels = {
 function createHeaderProps(
   overrides: Partial<HeaderProps> = {},
 ): HeaderProps {
-  const navTarget: NavTarget = { sectionId: "about", hash: "#o-nas" };
-
   return {
     menuOpen: false,
     onToggleMenu: vi.fn(),
-    onNavClick: vi.fn(
-      (
-        event: React.MouseEvent<HTMLAnchorElement>,
-        target: NavTarget,
-      ): void => {
-        // default mock implementation
-      },
-    ),
+    onNavClick: vi.fn(),
     onLogoClick: vi.fn(),
     currentLang: "sk",
     onChangeLang: vi.fn(),
